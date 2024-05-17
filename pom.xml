@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.5</version>
+	</parent>
+
+	<groupId>ch.swisscom.assignment</groupId>
+	<artifactId>feature-toggle</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>feature-toggle</name>
+	<description>FeatureToggle Assignment for Swisscom</description>
+	<packaging>pom</packaging>
+
+	<modules>
+        <module>feature-toggle-backend</module>
+		<!-- uncomment when frontend should be maven managed -->
+        <!-- <module>feature-toggle-frontend</module> -->
+    </modules>
+
+</project>
