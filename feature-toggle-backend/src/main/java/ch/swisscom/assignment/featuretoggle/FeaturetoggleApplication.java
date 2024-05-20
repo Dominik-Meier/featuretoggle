@@ -9,5 +9,4 @@ public class FeaturetoggleApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FeaturetoggleApplication.class, args);
 	}
-
 }

@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: darkblue;
+}
+
+h2 {
+  color: grey;
+}
+
+body {
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+}
+
+button {
+  background-color: lightgrey;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+input {
+  margin-bottom: .5rem;
+}
+
+input[type="text"], input[type="date"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem;
+}

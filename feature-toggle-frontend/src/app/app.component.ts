@@ -1,13 +1,33 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FeatureCreateComponent } from './feature/feature-create/feature-create.component';
+import { FeatureListComponent } from './feature/feature-list/feature-list.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [FeatureCreateComponent, FeatureListComponent, NgIf],
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'feature-toggle-frontend';
+  showCreate: boolean;
+  showList: boolean;
+  
+  constructor() {}
+
+  title = 'Feature toggle App';
+
+  onListButtonClick() {
+    this.showCreate = false;
+    this.showList = true;
+  }
+
+  onCreateButtonClick() {
+    this.showCreate = true;
+    this.showList = false;
+  }
+
+  onFeatureSaved() {
+    this.showCreate = false;
+  }
 }

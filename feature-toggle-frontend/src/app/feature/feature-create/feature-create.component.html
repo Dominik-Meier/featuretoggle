@@ -1,0 +1,29 @@
+<form [formGroup]="featureToggleForm" (ngSubmit)="onSubmit()">
+    <h1>Feature toggle form</h1>
+    <label>Display name: </label>
+    <input type="text" formControlName="displayName">
+
+    <label>Technical name: </label>
+    <input type="text" formControlName="technicalName" required>
+
+    <label>Description: </label>
+    <input type="text" formControlName="description">
+
+    <label>Expires on: </label>
+    <input type="date" formControlName="expiresOn">
+
+    <label>Inverted: </label>
+    <input type="checkbox" formControlName="inverted">
+
+    <div formArrayName="customerIds">
+        <h2>Customers</h2>
+        <button type="button" (click)="addCustomer()">+ Add another customer</button>
+    
+        <div *ngFor="let customer of customers.controls; let i=index">
+          <label for="customer-{{ i }}">Customer:</label>
+          <input id="customer-{{ i }}" type="text" [formControlName]="i">
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!featureToggleForm.valid">Create</button>
+</form>
